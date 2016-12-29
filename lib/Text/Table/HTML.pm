@@ -107,7 +107,7 @@ The example shown in the SYNOPSIS generates the following table:
  </thead>
  <tbody>
  <tr><td>alice</td><td>pvt</td><td>123&lt;456&gt;</td></tr>
- <tr><td>bob</td><td>cpl</td><td>98765321"</td></tr>
+ <tr><td>bob</td><td>cpl</td><td>98765321</td></tr>
  <tr><td>carol</td><td>brig gen</td><td>8745</td></tr>
  </tbody>
  </table>
