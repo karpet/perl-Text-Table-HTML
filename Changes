@@ -1,5 +1,12 @@
 Revision history for Text-Table-HTML
 
+0.002   2016-12-29 (PERLANCAR)
+
+	- No functional changes.
+
+	- [dist] Delete extraneous files.
+
+
 0.001   2016-12-29 (PERLANCAR)
 
         - First release.
