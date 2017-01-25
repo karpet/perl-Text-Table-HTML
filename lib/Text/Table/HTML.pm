@@ -3,11 +3,9 @@ package Text::Table::HTML;
 # DATE
 # VERSION
 
-#IFUNBUILT
 use 5.010001;
 use strict;
 use warnings;
-#END IFUNBUILT
 
 sub _encode {
     state $load = do { require HTML::Entities };
