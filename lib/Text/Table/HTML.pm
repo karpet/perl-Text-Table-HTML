@@ -16,6 +16,8 @@ sub table {
     my %params = @_;
     my $rows = $params{rows} or die "Must provide rows!";
 
+    my $should_encode = $params{encode} // 1;
+
     my $max_index = _max_array_index($rows);
 
     # here we go...
@@ -39,7 +41,7 @@ sub table {
             "<tr>",
 	    (map {(
                 $in_header ? "<th>" : "<td>",
-                _encode($row->[$_] // ''),
+                $should_encode ? _encode($row->[$_] // '') : ($row->[$_] // ''),
                 $in_header ? "</th>" : "</td>",
             )} 0..$max_index),
             "</tr>\n",
@@ -126,6 +128,11 @@ The C<table> function understands these arguments, which are passed as a hash.
 
 Takes an array reference which should contain one or more rows of data, where
 each row is an array reference.
+
+=item * encode
+
+Takes a true or false value (default: true) indicating whether text in rows
+should be HTML-escaped.
 
 =back
 
